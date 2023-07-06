@@ -1,0 +1,288 @@
+1. Write a program to input two numbers(A & B) from user and print the maximum element among A & B in each line.
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int floor = A / B; // Integer division
+        System.out.println(floor);
+    }
+}
+
+2.Write a program to input three numbers(A, B & C) from user and print the maximum element among A, B & C in each line.
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class MaximumNumber 
+{
+    public static void main(String[] args) 
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int C = scanner.nextInt();
+
+        int maxNum = Math.max(Math.max(A, B), C);
+
+        System.out.println(maxNum);
+
+        scanner.close();
+    }
+}
+
+3. Write a program to calculate the percentage (according to marks of a student) and grade (according to the percentage of a student). 
+Five numbers(A, B, C, D & E) represent the marks of a student in 5 subjects which are out of 100. 
+Print the percentage and the grade of the student.
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class PercentageAndGrade {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int C = scanner.nextInt();
+        int D = scanner.nextInt();
+        int E = scanner.nextInt();
+
+        int totalMarks = A + B + C + D + E;
+        int percentage = totalMarks / 5;
+
+        String grade;
+        if (percentage >= 90) {
+            grade = "A";
+        } else if (percentage >= 80) {
+            grade = "B";
+        } else if (percentage >= 70) {
+            grade = "C";
+        } else if (percentage >= 60) {
+            grade = "D";
+        } else if (percentage >= 40) {
+            grade = "E";
+        } else {
+            grade = "F";
+        }
+
+        System.out.println(percentage + "%");
+        System.out.println(grade);
+
+        scanner.close();
+    }
+}
+
+4. Write a program to input an integer(A) from user and print the Ath month of the year.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner; 
+
+import java.util.Scanner;
+
+public class MonthOfYear {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int A = scanner.nextInt();
+
+        String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+
+        System.out.println(months[A - 1]);
+    }
+}
+
+5.You are given 3 integer angles(in degrees) A, B and C of a triangle. You have to tell whether the triangle is valid or not.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class fun
+{
+   public static void main(String[]arg)
+   {
+       Scanner value = new Scanner(System.in);
+
+       int A = value.nextInt();
+       int B = value.nextInt();
+       int C = value.nextInt();
+
+       int sum = A + B + C;
+
+       if(sum==180){
+           System.out.println("1");
+       }
+       else{
+           System.out.println("0");
+       }
+   }
+}
+
+6.You are given a Bank account having N amount and you are asked to perform ADD(credit) or SUBTRACT(debit) operation of an amount X.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class BankAccount {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+
+       int balance = scanner.nextInt();
+
+       int type = scanner.nextInt();
+       int amount = scanner.nextInt();
+
+       if (type == 1) {
+           balance += amount;
+       } else if (type == 2) {
+           if (amount > balance) {
+               System.out.println("Insufficient Funds");
+               return;
+           }
+           balance -= amount;
+       }
+
+       System.out.println(balance);
+   }
+}
+
+7.Take an integer A as input. You have to tell whether A is divible by both 5 and 11 or not.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class Main 
+{
+   public static void main(String[] args) 
+   {
+       Scanner scanner = new Scanner(System.in);
+       int A = scanner.nextInt();
+
+       if (A % 5 == 0 && A % 11 == 0) 
+       {
+           System.out.println(1);  
+       } else 
+       {
+           System.out.println(0);   
+       }
+   }
+}
+
+8.Write a program to input from user three numbers(A, B & C) representing side lengths of a triangle.
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class Main {
+   public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       int A = scanner.nextInt();
+       int B = scanner.nextInt();
+       int C = scanner.nextInt();
+
+       if (A == B && B == C) {
+           System.out.println("equilateral");
+       } else if (A == B || B == C || A == C) {
+           System.out.println("isosceles");
+       } else {
+           System.out.println("scalene");
+       }
+   }
+}
+9. Write a program to input a number(A) from user and print 1 if it is positive, -1 if it is negative, 0 if it's neither positive nor negative.
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int A = scanner.nextInt();
+
+        if (A > 0) {
+            System.out.println(1);
+        } else if (A < 0) {
+            System.out.println(-1);
+        } else {
+            System.out.println(0);
+        }
+    }
+}
+
+10.10.Given two numbers A and B. Print the floor of A/B.
+
+Input Format
+
+There are two input lines The first line has a single integer A. The second line has a single integer B.
+
+Constraints
+
+1 <= A, B <= 10^4
+Output Format
+
+Print the floor of A/B in a single line.
+
+Sample Input
+
+0
+
+4
+
+5
+
+Sample Output 0
+
+0
+
+Explanation 0
+
+Program:
+
+floor(4/5) = 0
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int A = scanner.nextInt();
+        int B = scanner.nextInt();
+        int floor = A / B; // Integer division
+        System.out.println(floor);
+    }
+}
