@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class PrintStars {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read the integer N from user input
+        int N = scanner.nextInt();
+        
+        // Close the scanner to prevent resource leak
+        scanner.close();
+        
+        // Print N stars in a single line
+        for (int i = 0; i < N; i++) {
+            System.out.print("*");
+        }
+    }
+}
